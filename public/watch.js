@@ -6,9 +6,9 @@ const config = {
         "urls": "stun:15.206.150.88:443",
       },
        { 
-        "urls": "turn:15.206.150.88?transport=tcp",
-        "username": "stunscope",
-        "credential": "stonescope@123" 
+        "urls": "",
+        "username": "",
+        "credential": "" 
        }
   ]
 };
@@ -56,6 +56,7 @@ socket.on("broadcaster", () => {
 socket.on("disconnectPeer", () => {
   peerConnection.close();
 });
+
 
 window.onunload = window.onbeforeunload = () => {
   socket.close();
